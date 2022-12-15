@@ -11,10 +11,6 @@ const Navbar = () => {
 
   const { locale, locales, push } = useRouter();
 
-  // console.log(locales);
-
-  // const { t } = useTranslation();
-
   // const handleToggle = () => {
   //   setIsOpen(!isOpen);
   // };
@@ -59,9 +55,14 @@ const Navbar = () => {
       </div>
       <div className="flex gap-3 justify-end mx-8">
         {locales?.map((locale) => (
-          <button onClick={() => handleLocaleChange(locale)} key={locale}>
+          <Link
+            href={"/"}
+            locale={locale}
+            onClick={() => handleLocaleChange(locale)}
+            key={locale}
+          >
             {locale}
-          </button>
+          </Link>
         ))}
       </div>
     </nav>

@@ -1,6 +1,8 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Content, Apartments } from "../../types/Content";
 
 const spaceID = process.env.NEXT_PUBLIC_SPACE_ID;
@@ -15,7 +17,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const apartments = data.items;
 
   return {
-    props: { apartments, locale },
+    props: {
+      apartments,
+      locale,
+      ...(await serverSideTranslations(locale ? locale : "en", ["common"])),
+    },
   };
 };
 
@@ -25,7 +31,7 @@ interface ApartmentProps {
 }
 
 const Apartments: React.FC<ApartmentProps> = ({ apartments, locale }) => {
-  console.log(locale);
+  const { t } = useTranslation();
   return (
     <div>
       {apartments.map((apartment) => (
