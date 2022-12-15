@@ -23,8 +23,10 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
       apartment,
       locale,
       params,
-      // @ts-ignore
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale ? locale : "en", [
+        "common",
+        "navigation",
+      ])),
     },
   };
 };

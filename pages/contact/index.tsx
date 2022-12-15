@@ -1,8 +1,19 @@
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
 
-type Props = {};
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ? locale : "en", [
+        "common",
+        "navigation",
+      ])),
+    },
+  };
+};
 
-const Contact = (props: Props) => {
+const Contact = () => {
   return <div>Contact</div>;
 };
 

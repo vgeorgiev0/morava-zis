@@ -6,27 +6,25 @@ import { FaAlignRight } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { locale, locales, push } = useRouter();
+  const { locale, locales, push, asPath } = useRouter();
 
-  // const handleToggle = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  const { t } = useTranslation("navigation");
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   const scroll = () => {
     window.scrollTo(0, 0);
   };
 
   const handleLocaleChange = (locale?: string) => {
-    push(`/`, undefined, { locale });
+    push(`${asPath}`, undefined, { locale });
   };
-
-  const home = "home";
-  const apartments = "apartments";
-  const contact = "about";
-  const restaurant = "introRestaurant";
 
   return (
     <nav>
@@ -43,10 +41,10 @@ const Navbar = () => {
             />
           </Link>
           <div className="flex-1 flex-row gap-4 hidden md:flex">
-            <button>home</button>
-            <button>apartments</button>
-            <button>restaurant</button>
-            <button>contact us</button>
+            <Link href={"/"}>{t("home")}</Link>
+            <Link href={"/apartments"}>{t("apartments")}</Link>
+            <Link href={"/restaurant"}>{t("introRestaurant")}</Link>
+            <Link href={"/contact"}>{t("about")}</Link>
           </div>
           <button className="sm:inline md:hidden">
             <FaAlignRight />
@@ -56,7 +54,7 @@ const Navbar = () => {
       <div className="flex gap-3 justify-end mx-8">
         {locales?.map((locale) => (
           <Link
-            href={"/"}
+            href={`${asPath}`}
             locale={locale}
             onClick={() => handleLocaleChange(locale)}
             key={locale}
