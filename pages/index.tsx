@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import { useRouter } from "next/router";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { locale, locales, push } = useRouter();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,6 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Morava ZIS</h1>
+      <Link href={"/apartments"} locale={locale}>
+        Apartments
+      </Link>
+      <h2>{locale}</h2>
       {/* 
       <main className={styles.main}>
         <h1 className={styles.title}>
