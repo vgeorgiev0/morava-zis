@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` flex justify-evenly  sticky w-full top-0 left-0 bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
+      className={`z-auto flex justify-evenly  sticky w-full top-0 left-0 bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
         isOpen ? "h-54 rounded-tl-3xl rounded-bl-full rounded-br-3xl mt-1" : ""
       }`}
     >
@@ -37,8 +37,8 @@ const Navbar = () => {
         <div className="flex flex-1 py-1">
           <Link className="mt-2" locale={locale} href={"/"} onClick={scroll}>
             <Image
-              width={65}
-              height={60}
+              width={800}
+              height={600}
               className="w-14 h-16 md:w-16 md:h-20  flex-1 hover:opacity-80 transition-all duration-500"
               priority={true}
               alt="logo"
@@ -81,7 +81,7 @@ const Navbar = () => {
               {t("about")}
             </Link>
           </div>
-          <div className="flex flex-1 gap-1 justify-end pt-6 md:pt-0  ">
+          <div className="flex flex-1 gap-2 justify-end pt-6 md:pt-0 -mr-10 md:-mr-2  ">
             {locales?.map((locale) => (
               <Link
                 className={`localeButton ${

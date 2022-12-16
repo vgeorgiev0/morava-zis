@@ -1,6 +1,8 @@
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React from "react";
+import Card from "../../components/Card";
+import cardImage from "../../public/images/img4.jpg";
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -14,7 +16,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 const Restaurant = () => {
-  return <div>Restaurant</div>;
+  return (
+    <div>
+      <Card imageSrc={cardImage} />
+    </div>
+  );
 };
 
 export default Restaurant;
