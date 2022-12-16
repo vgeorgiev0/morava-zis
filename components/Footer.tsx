@@ -32,15 +32,17 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-800 text-white shadow-xl w-full text-left font-bold text-base px-14 py-4">
-      <h1 className="text-center font-extrabold text-2xl pb-4">About us</h1>
+      <h1 className="text-center font-extrabold text-2xl pb-4">
+        {t("aboutUs")}
+      </h1>
       <div className="bg-white w-full h-0.5 rounded-full self-center" />
       <div className="flex justify-around gap-10 pt-6">
         {aboutInfo.map((item, index) => {
           return (
             <article
               key={index}
-              className={`flex flex-col items-center gap-2 md:ml-16 ${
-                locale === "en" ? "md:ml-0" : ""
+              className={`flex flex-col items-center gap-2 md:ml-20 ${
+                locale === "en" ? "md:ml-2" : ""
               }`}
             >
               <h6 className="text-lg select-none">{item.title}</h6>
