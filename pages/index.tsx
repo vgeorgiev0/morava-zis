@@ -29,6 +29,75 @@ const Home: React.FC<HomeProps> = ({ locale }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Morava ZIS</h1>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque
+        mollitia incidunt id magnam ratione quidem quis culpa rem ab harum sed,
+        laboriosam dignissimos dicta nobis. Nisi minima nihil libero saepe
+        dolorem eum adipisci quasi aperiam accusantium ea explicabo delectus
+        laborum voluptatum consequuntur sit placeat incidunt, similique qui
+        nulla. Sequi ipsum vitae voluptas minima hic blanditiis facere fugiat
+        ducimus molestias odio dolore voluptatum error nam modi, tempore labore
+        quaerat excepturi. Illo quaerat provident iusto fugiat facere quam,
+        aliquid quod impedit facilis culpa esse magni quo animi dolorum quasi
+        saepe in? Enim, quaerat vitae consectetur at natus odit quod veritatis
+        nihil, necessitatibus, eius repudiandae iure iste similique! Cumque
+        labore vitae facilis amet! Inventore in non sint quisquam minus modi
+        consequatur architecto beatae cum, praesentium, quis libero veniam,
+        quibusdam harum nemo sunt repellat neque labore aliquam reprehenderit.
+        Ex dolorum, suscipit tenetur blanditiis, mollitia facere explicabo
+        incidunt pariatur repellendus fuga minus ut rerum totam quos ratione
+        adipisci ea, magni alias molestiae rem qui quia dolores odit? Facere,
+        numquam earum odio beatae molestias doloremque provident aliquid ad
+        dolorum eligendi quibusdam quae unde at itaque veniam obcaecati sit. Ab
+        dolores, sequi similique, odit sint facilis possimus praesentium
+        incidunt iste, ducimus iusto odio tenetur. Repudiandae, esse.
+      </h2>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque
+        mollitia incidunt id magnam ratione quidem quis culpa rem ab harum sed,
+        laboriosam dignissimos dicta nobis. Nisi minima nihil libero saepe
+        dolorem eum adipisci quasi aperiam accusantium ea explicabo delectus
+        laborum voluptatum consequuntur sit placeat incidunt, similique qui
+        nulla. Sequi ipsum vitae voluptas minima hic blanditiis facere fugiat
+        ducimus molestias odio dolore voluptatum error nam modi, tempore labore
+        quaerat excepturi. Illo quaerat provident iusto fugiat facere quam,
+        aliquid quod impedit facilis culpa esse magni quo animi dolorum quasi
+        saepe in? Enim, quaerat vitae consectetur at natus odit quod veritatis
+        nihil, necessitatibus, eius repudiandae iure iste similique! Cumque
+        labore vitae facilis amet! Inventore in non sint quisquam minus modi
+        consequatur architecto beatae cum, praesentium, quis libero veniam,
+        quibusdam harum nemo sunt repellat neque labore aliquam reprehenderit.
+        Ex dolorum, suscipit tenetur blanditiis, mollitia facere explicabo
+        incidunt pariatur repellendus fuga minus ut rerum totam quos ratione
+        adipisci ea, magni alias molestiae rem qui quia dolores odit? Facere,
+        numquam earum odio beatae molestias doloremque provident aliquid ad
+        dolorum eligendi quibusdam quae unde at itaque veniam obcaecati sit. Ab
+        dolores, sequi similique, odit sint facilis possimus praesentium
+        incidunt iste, ducimus iusto odio tenetur. Repudiandae, esse.
+      </h2>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum itaque
+        mollitia incidunt id magnam ratione quidem quis culpa rem ab harum sed,
+        laboriosam dignissimos dicta nobis. Nisi minima nihil libero saepe
+        dolorem eum adipisci quasi aperiam accusantium ea explicabo delectus
+        laborum voluptatum consequuntur sit placeat incidunt, similique qui
+        nulla. Sequi ipsum vitae voluptas minima hic blanditiis facere fugiat
+        ducimus molestias odio dolore voluptatum error nam modi, tempore labore
+        quaerat excepturi. Illo quaerat provident iusto fugiat facere quam,
+        aliquid quod impedit facilis culpa esse magni quo animi dolorum quasi
+        saepe in? Enim, quaerat vitae consectetur at natus odit quod veritatis
+        nihil, necessitatibus, eius repudiandae iure iste similique! Cumque
+        labore vitae facilis amet! Inventore in non sint quisquam minus modi
+        consequatur architecto beatae cum, praesentium, quis libero veniam,
+        quibusdam harum nemo sunt repellat neque labore aliquam reprehenderit.
+        Ex dolorum, suscipit tenetur blanditiis, mollitia facere explicabo
+        incidunt pariatur repellendus fuga minus ut rerum totam quos ratione
+        adipisci ea, magni alias molestiae rem qui quia dolores odit? Facere,
+        numquam earum odio beatae molestias doloremque provident aliquid ad
+        dolorum eligendi quibusdam quae unde at itaque veniam obcaecati sit. Ab
+        dolores, sequi similique, odit sint facilis possimus praesentium
+        incidunt iste, ducimus iusto odio tenetur. Repudiandae, esse.
+      </h2>
     </div>
   );
 };
