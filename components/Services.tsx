@@ -1,16 +1,30 @@
-import React, { ReactNode } from "react";
+import React from "react";
+import Card from "./Card";
+import CardLayout from "./CardLayout";
 
+import { StaticImageData } from "next/image";
+
+export interface Card {
+  imageSrc: StaticImageData;
+  title: string;
+  description: string;
+}
 interface ServicesProps {
-  children: ReactNode;
+  cards: Card[];
 }
 
-const Services: React.FC<ServicesProps> = ({ children }) => {
+const Services: React.FC<ServicesProps> = ({ cards }) => {
   return (
-    <section className="md:h-full flex items-center text-gray-600">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">{children}</div>
-      </div>
-    </section>
+    <CardLayout>
+      {cards.map((card, index) => (
+        <Card
+          key={index}
+          description={card.description}
+          imageSrc={card.imageSrc}
+          title={card.title}
+        />
+      ))}
+    </CardLayout>
   );
 };
 

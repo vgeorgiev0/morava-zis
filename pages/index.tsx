@@ -3,11 +3,15 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import Banner from "components/Banner";
 import Link from "next/link";
-import { useTranslation, Trans } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Services from "components/Services";
+import CardLayout from "components/CardLayout";
 import Card from "components/Card";
-import cardImage from "../public/images/img4.jpg";
+import resCardImage from "../public/images/03Res.jpg";
+import accCardImage from "../public/images/c10.jpg";
+import funCardImage from "../public/images/c16.jpg";
+import homeCardImage from "../public/images/home.jpg";
+import Services from "components/Services";
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
@@ -34,6 +38,30 @@ const Home: React.FC<HomeProps> = ({ _nextI18Next }) => {
   }, [_nextI18Next.initialLocale]);
 
   const { t } = useTranslation("common");
+
+  const cards = [
+    {
+      imageSrc: resCardImage,
+      title: t("cuisine"),
+      description: t("cuisineDesc"),
+    },
+    {
+      imageSrc: accCardImage,
+      title: t("hospitality"),
+      description: t("hospitalityDesc"),
+    },
+    {
+      imageSrc: funCardImage,
+      title: t("fun"),
+      description: t("funDesc"),
+    },
+    {
+      imageSrc: homeCardImage,
+      title: t("acc"),
+      description: t("accDesc"),
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -42,18 +70,17 @@ const Home: React.FC<HomeProps> = ({ _nextI18Next }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="-mt-24 mb-6">
-        <Banner title={t("mainTitle")} subtitle={t("mainSubtitle")}>
+        <Banner
+          heroType="bg-mainHero"
+          title={t("mainTitle")}
+          subtitle={t("mainSubtitle")}
+        >
           <Link locale={locale} href="/apartments" className="btn-primary">
             <button className="capitalize tracking-widest">{t("btn1")}</button>
           </Link>
         </Banner>
       </div>
-      <Services>
-        <Card imageSrc={cardImage} />
-        <Card imageSrc={cardImage} />
-        <Card imageSrc={cardImage} />
-        <Card imageSrc={cardImage} />
-      </Services>
+      <Services cards={cards} />
     </div>
   );
 };

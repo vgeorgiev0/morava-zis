@@ -9,7 +9,8 @@ module.exports = {
       backgroundImage: {
         mainHero: "url('../public/images/main.jpg')",
         apartmentHero: "url('../public/images/DSCN8304.JPG')",
-        restaurantHero: "url('../public/images/img4.jpg')",
+        restaurantHero: "url('../public/images/001Res.jpg')",
+        restaurantFooterHero: "url('../public/images/img4.jpg')",
       },
       // fontFamily: {
       //   lobster: ["var(--font-lobster)"],

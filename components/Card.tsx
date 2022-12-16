@@ -1,10 +1,12 @@
+import { DefaultTFuncReturn } from "i18next";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 interface CardProps {
   imageSrc: StaticImageData;
-  title?: string;
-  description?: string;
+  title: DefaultTFuncReturn;
+  description: DefaultTFuncReturn;
   children?: ReactNode;
 }
 
@@ -16,7 +18,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div className="p-4 sm:w-1/2 lg:w-1/4">
-      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:opacity-95 transition-all duration-500">
+      <div className="h-full border-2 hover:bg-indigo-700  hover:text-white border-gray-200 border-opacity-60 rounded-lg overflow-hidden hover:opacity-95 transition-all duration-200">
         <Image
           width={1400}
           height={800}
@@ -24,7 +26,7 @@ const Card: React.FC<CardProps> = ({
           src={imageSrc}
           alt="blog"
         />
-        <div className="p-6 hover:bg-indigo-700 hover:bg-opacity-90 hover:text-white transition duration-300 ease-in">
+        <div className="p-6 hover:bg-indigo-700 hover:bg-opacity-60 hover:text-white transition duration-300 ease-in">
           <h1 className="text-2xl font-semibold mb-3">{title}</h1>
           <p className="leading-relaxed mb-3">{description}</p>
           {children}

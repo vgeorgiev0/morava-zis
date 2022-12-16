@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-gradient-to-br from-blue-300 via-blue-100 to-blue-50">
+    <div className="bg-gradient-to-br from-blue-300 via-blue-50 to-white">
       <Navbar />
       {children}
       <Footer />

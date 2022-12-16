@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`z-auto flex justify-evenly  sticky w-full top-0 left-0 bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
+      className={`z-10 flex justify-evenly  sticky w-full top-0 left-0 bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
         isOpen ? "h-54 rounded-tl-3xl rounded-bl-full rounded-br-3xl mt-1" : ""
       }`}
     >
