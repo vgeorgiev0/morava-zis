@@ -1,4 +1,5 @@
 import Banner from "components/Banner";
+import CardLayout from "components/CardLayout";
 import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
@@ -33,7 +34,7 @@ const Restaurant: React.FC<RestaurantProps> = ({ _nextI18Next }) => {
 
   const { t } = useTranslation("common");
   return (
-    <div>
+    <div className="bg-restaurantBackgroundColor bg-opacity-50">
       <div className="-mt-24 mb-6">
         <Banner
           heroType="bg-restaurantHero"
@@ -45,7 +46,9 @@ const Restaurant: React.FC<RestaurantProps> = ({ _nextI18Next }) => {
           </Link>
         </Banner>
       </div>
-      <Card imageSrc={cardImage} />
+      <CardLayout>
+        <Card imageSrc={cardImage} title="title" description={"desc"} />
+      </CardLayout>
     </div>
   );
 };

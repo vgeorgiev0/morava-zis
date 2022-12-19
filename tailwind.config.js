@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -6,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        homeBackgroundColor: "#B5FFE9",
+        restaurantBackgroundColor: "#f6e7ae",
+      },
       backgroundImage: {
         mainHero: "url('../public/images/main.jpg')",
         apartmentHero: "url('../public/images/DSCN8304.JPG')",

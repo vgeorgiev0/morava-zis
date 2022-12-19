@@ -14,11 +14,6 @@
   }
 }
 
-@layer base {
-  body {
-    @apply bg-gradient-to-br from-blue-300 via-blue-50 to-white
-  }
-}
 
  html,
 body {
