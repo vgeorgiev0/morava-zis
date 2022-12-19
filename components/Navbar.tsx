@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../public/logo.png";
 import { FaAlignRight } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,15 +21,18 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
-
   const handleLocaleChange = (locale?: string) => {
     push(`${asPath}`, undefined, { locale });
   };
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [asPath]);
+
   return (
     <nav
-      className={`z-10 flex justify-evenly  sticky w-full top-0 left-0 bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
-        isOpen ? "h-54 rounded-tl-3xl rounded-bl-full rounded-br-3xl mt-1" : ""
+      className={`sticky z-10 flex justify-evenly w-full top-0 left-0 ease-in-out bg-white rounded-b-full rounded-tl-full transition-all duration-300  drop-shadow-2xl ${
+        isOpen ? " rounded-tl-3xl rounded-tr-3xl mt-1 rounded-b-none " : ""
       }`}
     >
       <div className="flex flex-row flex-1 gap-10 px-4 md:pl-10">
@@ -48,8 +50,8 @@ const Navbar = () => {
         </div>
         <div className="flex flex-2 mr-4 flex-col transition-all duration-500">
           <div
-            className={` flex  sm:flex-row flex-col transition-all duration-500 ${
-              isOpen ? " flex-col " : "hidden md:flex"
+            className={`md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 top-[-400px] transition-all ease-in-out duration-500 rounded-bl-full  ${
+              isOpen ? "top-20 opacity-100" : "opacity-0"
             }`}
           >
             <Link
@@ -105,10 +107,13 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-self-end ">
-          <button className="inline md:hidden  " onClick={handleToggle}>
-            <FaAlignRight className="hover:text-orange-400 text-amber-900 w-full h-full " />
-          </button>
+        <div className="flex justify-self-end items-center pb-2 pl-10">
+          {/* <button className="inline md:hidden  " onClick={handleToggle}> */}
+          <FaAlignRight
+            className="hover:text-orange-400 active:text-orange-300 text-amber-900 w-8 h-5 inline md:hidden  "
+            onClick={handleToggle}
+          />
+          {/* </button> */}
         </div>
       </div>
     </nav>

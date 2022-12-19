@@ -4,7 +4,7 @@
 
 @layer components {
   .navLink {
-    @apply block select-none p-2 lg:p-4 text-amber-900 transition-all hover:text-orange-300 text-center md:text-base lg:text-xl font-semibold lg:mr-10 md:mr-5 duration-300
+    @apply block select-none p-2 lg:p-4 text-amber-900 transition-all hover:text-orange-300 text-center md:text-base lg:text-xl font-semibold lg:mr-10 md:mr-5 duration-200
   }
   .localeButton {
     @apply block select-none text-amber-900 transition-all hover:font-extrabold text-center text-base font-semibold  mb-2 w-10 h-7 rounded-full uppercase duration-200 hover:text-slate-900 hover:bg-gradient-to-b 
